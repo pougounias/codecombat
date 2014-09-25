@@ -46,7 +46,7 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
     play: "Επίπεδα" # The top nav bar entry where players choose which levels to play
     community: "Κοινότητα"
     editor: "Συγγραφέας"
-    blog: "Μπλόγκ"
+    blog: "Ιστολόγιο"
     forum: "Φόρουμ"
     account: "Λογαριασμός"
     profile: "Προφίλ"
@@ -55,8 +55,8 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
     admin: "Διαχειριστής"
     home: "Αρχική"
     contribute: "Συνεισφέρω"
-    legal: "Νόμικά"
-    about: "Σχετικά με"
+    legal: "Νομικά"
+    about: "Περί"
     contact: "Επικοινωνία"
     twitter_follow: "Ακολούθησε"
     employers: "Εργοδότες"
@@ -94,12 +94,12 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
 #    required: "You need to log in before you can go that way."
 
   home:
-    slogan: "Μάθε να προγραμμάτιζεις με JavaScript μέσω ενός παιχνιδιού"
-    no_ie: "Το CodeCombat δεν παίζει με το Internet Explorer 9 ή κάποια παλαιότερη έκδοση. Συγνώμη!"
+    slogan: "Μάθε να προγραμμάτιζεις με JavaScript παίζοντας"
+    no_ie: "Το CodeCombat δεν είναι συμβατό με τον Internet Explorer 9 ή κάποια παλαιότερη έκδοση. Συγνώμη!"
     no_mobile: "Το CodeCombat δεν σχεδιάστηκε για κινητά και μπορεί να μην δουλεύει!"
     play: "Παίξε" # The big play button that just starts playing a level
     old_browser: "Ωχ, ο περιηγητής σας είναι πολύ παλιός για να τρέξετε το CodeCombat. Συγνώμη!"
-    old_browser_suffix: "Μπορείτε να δοκιμάσετε, αλλά πιθανών να μην λειτουργήσει."
+    old_browser_suffix: "Μπορείτε να δοκιμάσετε, αλλά είναι πιθανό να μην λειτουργήσει."
     campaign: "Εκστρατεία"
     for_beginners: "Για αρχάριους"
 #    multiplayer: "Multiplayer"
@@ -150,23 +150,23 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
 
   contact:
     contact_us: "Επικοινωνήστε μαζί μας"
-    welcome: "Καλό να ακούσω από εσάς! Χρησιμοποιήστε αυτή τη φόρμα για να μας στείλετε email. "
+    welcome: "Καλό είναι να τα πούμε! Χρησιμοποιήστε αυτή τη φόρμα για να μας στείλετε email. "
     contribute_prefix: "Αν σας ενδιαφέρει να βοηθήσετε, ελέγξτε την "
     contribute_page: "σελίδα συνεισφοράς"
     contribute_suffix: "!"
-    forum_prefix: "Για οτιδήποτε δημόσιο, δοκίμασε "
+    forum_prefix: "Για οποιοδήποτε δημόσιο σχόλιο, δοκίμασε "
     forum_page: "το φόρουμ μας"
-#    forum_suffix: " instead."
+    forum_suffix: "."
     send: "Αποστολή σχολίων"
 #    contact_candidate: "Contact Candidate"
 #    recruitment_reminder: "Use this form to reach out to candidates you are interested in interviewing. Remember that CodeCombat charges 15% of first-year salary. The fee is due upon hiring the employee and is refundable for 90 days if the employee does not remain employed. Part time, remote, and contract employees are free, as are interns."
 
   diplomat_suggestion:
-    title: "Βοηθήστε στην μετάφραση CodeCombat!"
+    title: "Βοηθήστε στην μετάφραση του CodeCombat!"
     sub_heading: "Χρειαζόμαστε τις γλωσσικές σας δεξιότητες."
-    pitch_body: "Αναπτύσσουμε το CodeCombat στα αγγλικά, αλλά ήδη έχουμε παίκτες από όλο τον κόσμο. Πολλοί από αυτούς θέλουν να παίξουν στα αγγλικά, αλλά δεν μιλούν αγγλικά, οπότε αν μπορείτε να μιλήσετε και τις δύο, παρακαλούμε να Αναπτύσσουμε CodeCombat στα αγγλικά, αλλά ήδη έχουμε παίκτες σε όλο τον κόσμο. Πολλοί από αυτούς θέλουν να παίξουν στα Ελληνικά, αλλά δεν μιλούν αγγλικά, οπότε αν μπορείτε να μιλήσετε και τις δύο γλώσσες, παρακαλούμε να σκεφτείτε την εγγραφή ως ένας Διπλωμάτης και βοηθήστε να μεταφραστεί τόσο η ιστοσελίδα CodeCombat και όλα τα επίπεδα στην Ελληνική γλώσσα."
-    missing_translations: "Μέχρι να μπορούν να μεταφράσουν τα πάντα σε Ελληνικά, θα δείτε την αγγλική γλώσσα όπου τα Ελληνικά  δεν είναι διαθέσιμα."
-    learn_more: "Μάθετε περισσότερα σχετικά με το να είστε ένας Διπλωμάτης"
+    pitch_body: "Αναπτύσσουμε το CodeCombat στα αγγλικά, αλλά ήδη έχουμε παίκτες από όλο τον κόσμο. Πολλοί από αυτούς θέλουν να παίξουν στα ελληνικά, αλλά δεν μιλούν αγγλικά. Εάν έχετε ευχέρεια και στις δύο γλώσσες, αγγλική κι ελληνική, παρακαλούμε να εγγραφείτε ως Διπλωμάτης και να συμβάλετε στην απόδοση της ιστοσελίδας CodeCombat και όλων των επιπέδων στην ελληνική γλώσσα."
+    missing_translations: "Μέχρι να ολοκληρωθεί η μετάφραση στα ελληνικά, θα δείτε να εμφανίζονται αγγλικές λέξεις και φράσεις, στα σημεία όπου τα ελληνικά δεν είναι διαθέσιμα."
+    learn_more: "Μάθετε πώς να γίνετε Διπλωμάτης"
     subscribe_as_diplomat: "Εγγραφή ως Διπλωμάτης"
 
   wizard_settings:
@@ -187,7 +187,7 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
 
   account_settings:
     title: "Ρυθμίσεις λογαριασμού"
-    not_logged_in: "Συνδέση ή Δημιούργησε έναν λογαριιασμό για να αλλάξεις τις ρυθμίσεις."
+    not_logged_in: "Συνδέση ή Δημιούργησε έναν λογαριασμό για να αλλάξεις τις ρυθμίσεις."
     autosave: "Οι ρυθμίσεις αποθηκεύονται αυτόματα"
     me_tab: "Εγώ"
     picture_tab: "Φωτογραφία"
