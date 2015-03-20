@@ -40,7 +40,7 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
     page_not_found: "Η σελίδα δεν βρέθηκε"
 
   diplomat_suggestion:
-    title: "Σύμβαλλε στη μετάφραση του CodeCombat!" # This shows up when a player switches to a non-English language using the language selector.
+    title: "Βοήθησε στη μετάφραση του CodeCombat!" # This shows up when a player switches to a non-English language using the language selector.
     sub_heading: "Χρειαζόμαστε τις γλωσσικές σου δεξιότητες."
     pitch_body: "Αναπτύσσουμε το CodeCombat στα αγγλικά, αλλά ήδη έχουμε παίκτες από όλο τον κόσμο. Πολλοί από αυτούς θέλουν να παίξουν στα ελληνικά. Εάν έχεις ευχέρεια και στις δύο γλώσσες, αγγλική κι ελληνική, παρακαλούμε να εγγραφείς ως Διπλωμάτης και να συμβάλλεις στην απόδοση της ιστοσελίδας CodeCombat και όλων των επιπέδων στην ελληνική γλώσσα."
     missing_translations: "Μέχρι να να μεταφραστούν τα πάντα στην ελληνική γλώσσα, θα βλέπεις αγγλικά λεκτικά στα σημεία όπου τα ελληνικά δεν είναι διαθέσιμα."
@@ -56,9 +56,9 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
     unlock: "Ξεκλείδωσε" # For purchasing items and heroes
     confirm: "Επιβεβαίωση"
 #    owned: "Owned" # For items you own
-    locked: "Κλειδωμένο"
-    purchasable: "Διαθέσιμο για αγορά" # For a hero you unlocked but haven't purchased
-    available: "Διαθέσιμο"
+    locked: "Κλειδωμένος"
+    purchasable: "Διαθέσιμος για αγορά" # For a hero you unlocked but haven't purchased
+    available: "Διαθέσιμος"
 #    skills_granted: "Skills Granted" # Property documentation details
     heroes: "Ήρωες" # Tooltip on hero shop button from /play
     achievements: "Επιτεύγματα" # Tooltip on achievement list button from /play
@@ -114,7 +114,7 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
 #    finishing: "Finishing"
     sign_in_with_facebook: "Σύνδεση μέσω Facebook"
     sign_in_with_gplus: "Σύνδεση μέσω G+"
-#    signup_switch: "Want to create an account?"
+    signup_switch: "Θέλεις να ανοίξεις λογαριασμό;"
 
   signup:
     email_announcements: "Λαμβάνετε ανακοινώσεις μέσω email"
@@ -122,8 +122,8 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
     sign_up: "Εγγραφή"
     log_in: "Σύνδεση με κωδικό"
     social_signup: "Ή, μπορείς να συνδεθείς μέσω Facebook ή G+:"
-    required: "Θα πρέπει να συνδεθείτε πριν πάτε προς τα εκεί."
-#    login_switch: "Already have an account?"
+    required: "Πρέπει να συνδεθείς για να συνεχίσεις."
+    login_switch: "Έχεις ήδη λογαριασμό;"
 
   recover:
     recover_account_title: "Ανάκτηση λογαριασμού"
@@ -152,14 +152,14 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
     manual: "Οδηγίες"
 #    fork: "Fork"
     play: "Παίξε" # When used as an action verb, like "Play next level"
-#    retry: "Retry"
+    retry: "Προσπάθησε εκ νέου"
 #    actions: "Actions"
-#    info: "Info"
-#    help: "Help"
+    info: "Πληροφορίες"
+    help: "Βοήθεια"
     watch: "Παρακολούθηση"
-    unwatch: "Παύση παρακολούθηση"
+    unwatch: "Παύση παρακολούθησης"
     submit_patch: "Αποστολή Επιδιόρθωσης"
-#    submit_changes: "Submit Changes"
+    submit_changes: "Αποστολή Αλλαγών"
 
   general:
     and: "και"
@@ -205,7 +205,7 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
     hard: "Δύσκολο"
     player: "Παίκτης"
 #    player_level: "Level" # Like player level 5, not like level: Dungeons of Kithgard
-    warrior: "Μαχητής"
+    warrior: "Πολεμιστής"
 #    ranger: "Ranger"
     wizard: "Μάγος"
 
@@ -456,31 +456,31 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
 #    unsubscribing: "Unsubscribing..."
 
   choose_hero:
-#    choose_hero: "Choose Your Hero"
-#    programming_language: "Programming Language"
-#    programming_language_description: "Which programming language do you want to use?"
-#    default: "Default"
-#    experimental: "Experimental"
+    choose_hero: "Διάλεξε Ήρωα"
+    programming_language: "Γλώσσα Προγραμματισμού"
+    programming_language_description: "Ποια γλώσσα προγραμματισμού θες να χρησιμοποιήσεις;"
+    default: "Προεπιλεγμένη"
+    experimental: "Πειραματική"
     python_blurb: "Απλή αλλά ισχυρή, κατάλληλη για αρχάριους και προχωρημένους."
     javascript_blurb: "Η γλώσσα του web."
     coffeescript_blurb: "Βελτιωμένη σύνταξη της JavaScript."
     clojure_blurb: "Μοντέρνα Lisp."
     lua_blurb: "Scripting γλώσσα παιχνιδιών."
     io_blurb: "Απλή αλλά ασαφής."
-#    status: "Status"
-#    hero_type: "Type"
-#    weapons: "Weapons"
-#    weapons_warrior: "Swords - Short Range, No Magic"
-#    weapons_ranger: "Crossbows, Guns - Long Range, No Magic"
-#    weapons_wizard: "Wands, Staffs - Long Range, Magic"
-#    attack: "Damage" # Can also translate as "Attack"
-#    health: "Health"
-#    speed: "Speed"
+    status: "Κατάσταση"
+    hero_type: "Τύπος"
+    weapons: "Όπλα"
+    weapons_warrior: "Ξίφη - Μικρό βεληνεκές, Χωρίς Μαγικά"
+    weapons_ranger: "Τόξα, Τυφέκια - Μεγάλο βεληνεκές, Χωρίς Μαγικά"
+    weapons_wizard: "Ραβδιά, Βακτηρίες - Μεγάλο βεληνεκές, Μαγικά"
+    attack: "Επίθεση" # Can also translate as "Attack"
+    health: "Υγεία"
+    speed: "Ταχύτητα"
 #    regeneration: "Regeneration"
 #    range: "Range" # As in "attack or visual range"
 #    blocks: "Blocks" # As in "this shield blocks this much damage"
 #    backstab: "Backstab" # As in "this dagger does this much backstab damage"
-#    skills: "Skills"
+    skills: "Ικανότητες"
 #    attack_1: "Deals"
 #    attack_2: "of listed"
 #    attack_3: "weapon damage."
@@ -490,7 +490,7 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
 #    speed_1: "Moves at"
 #    speed_2: "meters per second."
 #    available_for_purchase: "Available for Purchase" # Shows up when you have unlocked, but not purchased, a hero in the hero store
-#    level_to_unlock: "Level to unlock:" # Label for which level you have to beat to unlock a particular hero (click a locked hero in the store to see)
+    level_to_unlock: "Ξεκλειδώνει στο επίπεδο:" # Label for which level you have to beat to unlock a particular hero (click a locked hero in the store to see)
 #    restricted_to_certain_heroes: "Only certain heroes can play this level."
 
 #  skill_docs:
