@@ -1,17 +1,17 @@
 module.exports = nativeDescription: "Ελληνικά", englishDescription: "Greek", translation:
   home:
-    slogan: "Μάθε να Προγραμμάτιζεις Παίζοντας"
+    slogan: "Μάθε να Προγραμματίζεις Παίζοντας"
     no_ie: "Το CodeCombat δεν είναι συμβατό με το Internet Explorer 9 ή κάποια παλαιότερη έκδοση. Συγγνώμη!" # Warning that only shows up in IE8 and older
     no_mobile: "Το CodeCombat δεν σχεδιάστηκε για κινητά και μπορεί να μην λειτουργεί σωστά!" # Warning that shows up on mobile devices
     play: "Παίξε" # The big play button that opens up the campaign view.
-    old_browser: "Ωχ, ο περιηγητής σας είναι πολύ παλαιός για να τρέξει το CodeCombat. Συγγνώμη!" # Warning that shows up on really old Firefox/Chrome/Safari
-    old_browser_suffix: "Μπορείτε να δοκιμάσετε, αλλά πιθανότατα δεν θα λειτουργήσει."
+    old_browser: "Ωχ, ο περιηγητής σου είναι πολύ παλαιός για να τρέξει το CodeCombat. Συγγνώμη!" # Warning that shows up on really old Firefox/Chrome/Safari
+    old_browser_suffix: "Μπορείς να δοκιμάσεις, αλλά πιθανότατα δεν θα λειτουργήσει."
     ipad_browser: "Δυσάρεστα νέα: Το CodeCombat δεν τρέχει στο iPad μέσω περιηγητή. Ευχάριστα νέα: αναμένουμε την έγκριση της Apple για την εφαρμογή μας για iPad."
     campaign: "Εκστρατεία"
     for_beginners: "Για αρχάριους"
     multiplayer: "Πολλαπλοί Παίκτες" # Not currently shown on home page
     for_developers: "Για προγραμματιστές" # Not currently shown on home page.
-    or_ipad: "Ή κατεβάστε για iPad"
+    or_ipad: "Ή κατέβασε για iPad"
 
   nav:
     play: "Επίπεδα" # The top nav bar entry where players choose which levels to play
@@ -25,7 +25,7 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
     code: "Κώδικας"
     admin: "Διαχειριστής" # Only shows up when you are an admin
     home: "Αρχική"
-    contribute: "Συνεισφέρω"
+    contribute: "Συνεισφορά"
     legal: "Νομικά"
     about: "Περί ημών"
     contact: "Επικοινωνία"
@@ -40,20 +40,20 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
     page_not_found: "Η σελίδα δεν βρέθηκε"
 
   diplomat_suggestion:
-    title: "Συμβάλλετε στη μετάφραση του CodeCombat!" # This shows up when a player switches to a non-English language using the language selector.
-    sub_heading: "Χρειαζόμαστε τις γλωσσικές σας δεξιότητες."
-    pitch_body: "Αναπτύσσουμε το CodeCombat στα αγγλικά, αλλά ήδη έχουμε παίκτες από όλο τον κόσμο. Πολλοί από αυτούς θέλουν να παίξουν στα ελληνικά. Εάν έχετε ευχέρεια και στις δύο γλώσσες, αγγλική κι ελληνική, παρακαλούμε να εγγραφείτε ως Διπλωμάτης και να συμβάλλετε στην απόδοση της ιστοσελίδας CodeCombat και όλων των επιπέδων στην ελληνική γλώσσα."
-    missing_translations: "Μέχρι να να μεταφραστούν τα πάντα στην ελληνική γλώσσα, θα βλέπετε τα αγγλικά λεκτικά στα σημεία όπου τα ελληνικά δεν είναι διαθέσιμα."
-    learn_more: "Μάθετε πώς να γίνετε Διπλωμάτης"
+    title: "Σύμβαλλε στη μετάφραση του CodeCombat!" # This shows up when a player switches to a non-English language using the language selector.
+    sub_heading: "Χρειαζόμαστε τις γλωσσικές σου δεξιότητες."
+    pitch_body: "Αναπτύσσουμε το CodeCombat στα αγγλικά, αλλά ήδη έχουμε παίκτες από όλο τον κόσμο. Πολλοί από αυτούς θέλουν να παίξουν στα ελληνικά. Εάν έχεις ευχέρεια και στις δύο γλώσσες, αγγλική κι ελληνική, παρακαλούμε να εγγραφείς ως Διπλωμάτης και να συμβάλλεις στην απόδοση της ιστοσελίδας CodeCombat και όλων των επιπέδων στην ελληνική γλώσσα."
+    missing_translations: "Μέχρι να να μεταφραστούν τα πάντα στην ελληνική γλώσσα, θα βλέπεις αγγλικά λεκτικά στα σημεία όπου τα ελληνικά δεν είναι διαθέσιμα."
+    learn_more: "Μάθε πώς να γίνεις Διπλωμάτης"
     subscribe_as_diplomat: "Εγγραφή ως Διπλωμάτης"
 
   play:
-    play_as: "Παίξτε ως" # Ladder page
+    play_as: "Παίξε ως" # Ladder page
     spectate: "Θεατής" # Ladder page
     players: "παίκτες" # Hover over a level on /play
     hours_played: "ώρες παιχνιδιού" # Hover over a level on /play
     items: "Αντικείμενα" # Tooltip on item shop button from /play
-    unlock: "Ξεκλειδώστε" # For purchasing items and heroes
+    unlock: "Ξεκλείδωσε" # For purchasing items and heroes
     confirm: "Επιβεβαίωση"
 #    owned: "Owned" # For items you own
     locked: "Κλειδωμένο"
@@ -78,7 +78,7 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
 #    awaiting_levels_adventurer: "Sign up as an Adventurer"
 #    awaiting_levels_adventurer_suffix: "to be the first to play new levels."
 #    adjust_volume: "Adjust volume"
-    choose_your_level: "Διάλεξε το επίπεδο σου" # The rest of this section is the old play view at /play-old and isn't very important.
+    choose_your_level: "Διάλεξε το επίπεδό σου" # The rest of this section is the old play view at /play-old and isn't very important.
     adventurer_prefix: "Μπορείτε να μεταβείτε σε οποιοδήποτε επίπεδο κάτω, ή να συζητήσετε για τις πίστες στο "
     adventurer_forum: "Φόρουμ του Adventurer"
     adventurer_suffix: "."
@@ -97,8 +97,8 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
 #    blurb: "You’re making great progress! Tell someone how much you've learned with CodeCombat."
 #    email_invalid: "Email address invalid."
 #    form_blurb: "Enter their email below and we’ll show them!"
-    form_label: "Διεύθυνση ηλεκτρονικού ταχυδρομίου"
-    placeholder: "Διεύθυνση ηλεκτρονικού ταχυδρομίου"
+    form_label: "Διεύθυνση ηλεκτρονικού ταχυδρομείου"
+    placeholder: "Διεύθυνση ηλεκτρονικού ταχυδρομείου"
     title: "Εξαιρετική Δουλειά, Μαθητευόμενε"
     tell_friend: "Πες το στον φίλο/η σου"
 #    tell_parent: "Tell your Parent"
@@ -131,8 +131,8 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
     recovery_sent: "Email ανάκτησης στάλθηκε."
 
   items:
-#    primary: "Primary"
-#    secondary: "Secondary"
+    primary: "Κύρια"
+    secondary: "Δευτερεύοντα"
     armor: "Πανοπλία"
     accessories: "Εξαρτήματα"
     misc: "Διάφορα"
@@ -205,7 +205,7 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
     hard: "Δύσκολο"
     player: "Παίκτης"
 #    player_level: "Level" # Like player level 5, not like level: Dungeons of Kithgard
-#    warrior: "Warrior"
+    warrior: "Μαχητής"
 #    ranger: "Ranger"
     wizard: "Μάγος"
 
@@ -226,7 +226,7 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
     years: "χρόνια"
 
   play_level:
-    done: "Έτοιμο"
+    done: "Εντάξει"
     home: "Αρχική" # Not used any more, will be removed soon.
     level: "Επίπεδο" # Like "Level: Dungeons of Kithgard"
     skip: "Παράλειψη"
@@ -650,21 +650,21 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
     autosave: "Οι ρυθμίσεις αποθηκεύονται αυτόματα"
     me_tab: "Εγώ"
     picture_tab: "Φωτογραφία"
-#    delete_account_tab: "Delete Your Account"
-#    wrong_email: "Wrong Email"
+    delete_account_tab: "Διαγραφή λογαριασμού"
+    wrong_email: "Λανθασμένο email"
     upload_picture: "Ανέβασμα φωτογραφίας"
-#    delete_this_account: "Delete this account permanently"
+    delete_this_account: "Μόνιμη διαγραφή του λογαριασμού"
 #    god_mode: "God Mode"
     password_tab: "Κωδικός"
     emails_tab: "Emails"
     admin: "Διαχειριστής"
     new_password: "Καινούργιος Κωδικός"
-    new_password_verify: " Επαλήθευση  Κωδικού"
-#    type_in_email: "Type in your email to confirm the deletion"
+    new_password_verify: "Επαλήθευση Κωδικού"
+    type_in_email: "Γράψε το email σου για να επιβεβαιώσεις τη διαγραφή"
     email_subscriptions: "Συνδρομές Email"
 #    email_subscriptions_none: "No Email Subscriptions."
     email_announcements: "Ανακοινώσεις"
-    email_announcements_description: "Λάβετε emails για τα τελευταία νέα και τις εξελίξεις του CodeCombat."
+    email_announcements_description: "Λάβε emails για τα τελευταία νέα και τις εξελίξεις του CodeCombat."
     email_notifications: "Ειδοποιήσεις"
 #    email_notifications_summary: "Controls for personalized, automatic email notifications related to your CodeCombat activity."
 #    email_any_notes: "Any Notifications"
@@ -673,14 +673,14 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
 #    email_recruit_notes: "Job Opportunities"
 #    email_recruit_notes_description: "If you play really well, we may contact you about getting you a (better) job."
     contributor_emails: "Contributor Class Emails"
-    contribute_prefix: "Αναζητούμε ανθρώπους που θέλουν να  "
-    contribute_page: "Σελίδα συνεισφοράς"
-    contribute_suffix: " μάθε περισσότερα"
-    email_toggle: "Επέλεξα όλα"
+    contribute_prefix: "Αναζητούμε ανθρώπους που θέλουν να συμμετέχουν! Δες τη "
+    contribute_page: "σελίδα συνεισφοράς"
+    contribute_suffix: " για περισσότερες πληροφορίες."
+    email_toggle: "Επιλογή όλων"
     error_saving: "Σφάλμα αποθήκευσης"
     saved: "Οι αλλαγές αποθηκεύτηκαν"
     password_mismatch: "Οι κωδικοί δεν ταιριάζουν"
-    password_repeat: "Παρακαλώ επαναλάβετε τον κωδικό σας."
+    password_repeat: "Παρακαλώ επανάλαβε τον κωδικό σου."
 #    job_profile: "Job Profile" # Rest of this section (the job profile stuff and wizard stuff) is deprecated
 #    job_profile_approved: "Your job profile has been approved by CodeCombat. Employers will be able to see it until you either mark it inactive or it has not been changed for four weeks."
 #    job_profile_explanation: "Hi! Fill this out, and we will get in touch about finding you a software developer job."
