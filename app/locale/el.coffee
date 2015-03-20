@@ -1,17 +1,17 @@
 module.exports = nativeDescription: "Ελληνικά", englishDescription: "Greek", translation:
   home:
-    slogan: "Μάθε να Προγραμμάτιζεις Παίζοντας ένα Παιχνίδι"
-    no_ie: "Το CodeCombat δεν είναι συμβατό με το Internet Explorer 9 ή κάποια παλαιότερη έκδοση. Συγνώμη!" # Warning that only shows up in IE8 and older
-    no_mobile: "Το CodeCombat δεν σχεδιάστηκε για κινητά και μπορεί να μην δουλεύει!" # Warning that shows up on mobile devices
+    slogan: "Μάθε να Προγραμμάτιζεις Παίζοντας"
+    no_ie: "Το CodeCombat δεν είναι συμβατό με το Internet Explorer 9 ή κάποια παλαιότερη έκδοση. Συγγνώμη!" # Warning that only shows up in IE8 and older
+    no_mobile: "Το CodeCombat δεν σχεδιάστηκε για κινητά και μπορεί να μην λειτουργεί σωστά!" # Warning that shows up on mobile devices
     play: "Παίξε" # The big play button that opens up the campaign view.
-    old_browser: "Ωχ, ο περιηγητής σας είναι πολύ παλιός για να τρέξει το CodeCombat. Συγνώμη!" # Warning that shows up on really old Firefox/Chrome/Safari
-    old_browser_suffix: "Μπορείτε να δοκιμάσετε, αλλά πιθανότατα να μην λειτουργήσει."
+    old_browser: "Ωχ, ο περιηγητής σας είναι πολύ παλαιός για να τρέξει το CodeCombat. Συγγνώμη!" # Warning that shows up on really old Firefox/Chrome/Safari
+    old_browser_suffix: "Μπορείτε να δοκιμάσετε, αλλά πιθανότατα δεν θα λειτουργήσει."
     ipad_browser: "Δυσάρεστα νέα: Το CodeCombat δεν τρέχει στο iPad μέσω περιηγητή. Ευχάριστα νέα: αναμένουμε την έγκριση της Apple για την εφαρμογή μας για iPad."
     campaign: "Εκστρατεία"
     for_beginners: "Για αρχάριους"
     multiplayer: "Πολλαπλοί Παίκτες" # Not currently shown on home page
     for_developers: "Για προγραμματιστές" # Not currently shown on home page.
-    or_ipad: "Η' κατεβάστε για iPad"
+    or_ipad: "Ή κατεβάστε για iPad"
 
   nav:
     play: "Επίπεδα" # The top nav bar entry where players choose which levels to play
@@ -27,7 +27,7 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
     home: "Αρχική"
     contribute: "Συνεισφέρω"
     legal: "Νομικά"
-    about: "Περί"
+    about: "Περί ημών"
     contact: "Επικοινωνία"
     twitter_follow: "Ακολούθησε"
     teachers: "Εκπαιδευτικοί"
@@ -40,11 +40,11 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
     page_not_found: "Η σελίδα δεν βρέθηκε"
 
   diplomat_suggestion:
-    title: "Βοηθήστε στην μετάφραση του CodeCombat!" # This shows up when a player switches to a non-English language using the language selector.
+    title: "Συμβάλλετε στη μετάφραση του CodeCombat!" # This shows up when a player switches to a non-English language using the language selector.
     sub_heading: "Χρειαζόμαστε τις γλωσσικές σας δεξιότητες."
-    pitch_body: "Αναπτύσσουμε το CodeCombat στα αγγλικά, αλλά ήδη έχουμε παίκτες από όλο τον κόσμο. Πολλοί από αυτούς θέλουν να παίξουν στα ελληνικά, αλλά δεν μιλούν αγγλικά. Εάν έχετε ευχέρεια και στις δύο γλώσσες, αγγλική κι ελληνική, παρακαλούμε να εγγραφείτε ως Διπλωμάτης και να συμβάλετε στην απόδοση της ιστοσελίδας CodeCombat και όλων των επιπέδων στην ελληνική γλώσσα."
-    missing_translations: "Μέχρι να μπορούν να μεταφράσουν τα πάντα σε Ελληνικά, θα δείτε την αγγλική γλώσσα όπου τα Ελληνικά  δεν είναι διαθέσιμα."
-    learn_more: "Μάθετε πώς να γίνετε  Διπλωμάτης"
+    pitch_body: "Αναπτύσσουμε το CodeCombat στα αγγλικά, αλλά ήδη έχουμε παίκτες από όλο τον κόσμο. Πολλοί από αυτούς θέλουν να παίξουν στα ελληνικά. Εάν έχετε ευχέρεια και στις δύο γλώσσες, αγγλική κι ελληνική, παρακαλούμε να εγγραφείτε ως Διπλωμάτης και να συμβάλλετε στην απόδοση της ιστοσελίδας CodeCombat και όλων των επιπέδων στην ελληνική γλώσσα."
+    missing_translations: "Μέχρι να να μεταφραστούν τα πάντα στην ελληνική γλώσσα, θα βλέπετε τα αγγλικά λεκτικά στα σημεία όπου τα ελληνικά δεν είναι διαθέσιμα."
+    learn_more: "Μάθετε πώς να γίνετε Διπλωμάτης"
     subscribe_as_diplomat: "Εγγραφή ως Διπλωμάτης"
 
   play:
