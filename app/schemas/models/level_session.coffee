@@ -88,7 +88,7 @@ _.extend LevelSessionSchema.properties,
       type: 'boolean'  # Not tracked any more
     frame:
       type: 'number'  # Not tracked any more
-    thangs:
+    thangs:   # ... what is this? Is this used?
       type: 'object'
       additionalProperties:
         title: 'Thang'
@@ -208,6 +208,12 @@ _.extend LevelSessionSchema.properties,
     type: 'boolean'
     description: 'Whether this session is still in the first ranking chain after being submitted.'
 
+  randomSimulationIndex:
+    type: 'number'
+    description: 'A random updated every time the game is randomly simulated for a uniform random distribution of simulations (see #2448).'
+    minimum: 0
+    maximum: 1
+
   unsubscribed:
     type: 'boolean'
     description: 'Whether the player has opted out of receiving email updates about ladder rankings for this session.'
@@ -241,7 +247,7 @@ _.extend LevelSessionSchema.properties,
           description: 'The date a match was computed.'
         playtime:
           title: 'Playtime so far'
-          description: 'The total seconds of playtime on this session when the match was computed.'
+          description: 'The total seconds of playtime on this session when the match was computed. Not currently tracked.'
           type: 'number'
         metrics:
           type: 'object'

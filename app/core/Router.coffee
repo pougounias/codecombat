@@ -33,15 +33,21 @@ module.exports = class CocoRouter extends Backbone.Router
     'admin/clas': go('admin/CLAsView')
     'admin/employers': go('admin/EmployersListView')
     'admin/files': go('admin/FilesView')
-    'admin/growth': go('admin/GrowthView')
+    'admin/analytics/users': go('admin/AnalyticsUsersView')
+    'admin/analytics/subscriptions': go('admin/AnalyticsSubscriptionsView')
     'admin/level-sessions': go('admin/LevelSessionsView')
     'admin/users': go('admin/UsersView')
     'admin/base': go('admin/BaseView')
     'admin/user-code-problems': go('admin/UserCodeProblemsView')
+    'admin/pending-patches': go('admin/PendingPatchesView')
 
     'beta': go('HomeView')
 
     'cla': go('CLAView')
+
+    'clans': go('clans/ClansView')
+    'clans/:clanID': go('clans/ClanDetailsView')
+
     'community': go('CommunityView')
 
     'contribute': go('contribute/MainContributeView')
@@ -85,6 +91,8 @@ module.exports = class CocoRouter extends Backbone.Router
     'i18n/achievement/:handle': go('i18n/I18NEditAchievementView')
     'i18n/campaign/:handle': go('i18n/I18NEditCampaignView')
     'i18n/poll/:handle': go('i18n/I18NEditPollView')
+
+    'identify': go('user/IdentifyView')
 
     'legal': go('LegalView')
 

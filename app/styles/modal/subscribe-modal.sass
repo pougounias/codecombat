@@ -90,6 +90,9 @@
     top: 160px
     width: 450px
     background: rgba(0, 0, 0, 0.0)
+    border-width: 0px
+    .free-cell
+      border-right-width: 1px
     thead
       tr
         th
@@ -99,16 +102,42 @@
           font-weight: 700
           line-height: 1.1
           color: #317EAC
+          padding: 4px
+          border-width: 0px
+          border-color: rgba(85, 85, 85, 0.1)
     tbody
       font-size: 14px
       .center-ok
         text-align: center
+      tr
+        td
+          padding: 3px
+          border-width: 0px
+          border-top-width: 1px
+          border-color: rgba(85, 85, 85, 0.1)
 
   //- Parent info popover link
 
   #parents-info
     position: absolute
     left: 38px
+    top: 389px
+    text-decoration: underline
+    cursor: pointer
+    font-weight: bold
+    line-height: 18px
+    color: black
+    font-family: $headings-font-family
+    font-size: 18px
+
+  .popover-title
+    line-height: 26px
+
+  //- Payment methods info popover link
+
+  #payment-methods-info
+    position: absolute
+    right: 38px
     top: 389px
     text-decoration: underline
     cursor: pointer
@@ -161,11 +190,11 @@
     border-width: 14px 20px 20px 20px
     color: darken(white, 5%)
 
-  #email-parent-form
+  .email-parent-form
     .email_invalid
       color: red
       display: none
-  #email-parent-complete
+  .email-parent-complete
     display: none
 
   //- Errors

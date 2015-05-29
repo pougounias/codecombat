@@ -1,7 +1,7 @@
 module.exports = nativeDescription: "Deutsch (Deutschland)", englishDescription: "German (Germany)", translation:
   home:
     slogan: "Lerne spielend Programmieren"
-    no_ie: "CodeCombat läuft nicht im IE 8 oder älteren Browsern. Tut uns Leid!" # Warning that only shows up in IE8 and older
+    no_ie: "CodeCombat läuft nicht im IE 8 oder älteren Browsern. Tut uns leid!" # Warning that only shows up in IE8 and older
     no_mobile: "CodeCombat ist nicht für Mobilgeräte optimiert und funktioniert möglicherweise nicht." # Warning that shows up on mobile devices
     play: "Spielen" # The big play button that opens up the campaign view.
     old_browser: "Oh! Dein Browser ist zu alt für CodeCombat. Sorry!" # Warning that shows up on really old Firefox/Chrome/Safari
@@ -74,7 +74,7 @@ module.exports = nativeDescription: "Deutsch (Deutschland)", englishDescription:
     anonymous: "Anonymer Spieler"
     level_difficulty: "Schwierigkeit: "
     campaign_beginner: "Anfängerkampagne"
-    awaiting_levels_adventurer_prefix: "Wir veröffentlichen fünf Levels pro Woche."
+    awaiting_levels_adventurer_prefix: "Wir veröffentlichen fünf Levels pro Woche." # {change}
     awaiting_levels_adventurer: "Registriere dich als ein Abenteurer"
     awaiting_levels_adventurer_suffix: "sei der Erste, der neue Levels spielt."
     adjust_volume: "Lautstärke anpassen"
@@ -90,18 +90,16 @@ module.exports = nativeDescription: "Deutsch (Deutschland)", englishDescription:
     campaign_multiplayer_description: "... in der Du Kopf-an-Kopf gegen andere Spieler programmierst."
     campaign_player_created: "Von Spielern erstellt"
     campaign_player_created_description: "... in welchem Du gegen die Kreativität eines <a href=\"/contribute#artisan\">Artisan Zauberers</a> kämpfst."
-    campaign_classic_algorithms: "Klassiche Algorithmen"
+    campaign_classic_algorithms: "Klassische Algorithmen"
     campaign_classic_algorithms_description: "... in welchem du die populärsten Algorithmen der Informatik lernst."
 
   share_progress_modal:
-    blurb: "Du machst dich gut! Sag jemanden wie viel du mit CodeCombat gelernt hast."
+    blurb: "Du machst dich gut! Sag jemanden wie viel du mit CodeCombat gelernt hast." # {change}
     email_invalid: "Diese Email Adresse ist ungültig."
     form_blurb: "Schreibe hier ihre Emailadresse rein und wir werden es ihnen zeigen."
     form_label: "Email Adresse"
     placeholder: "Email Adresse"
     title: "Gute Arbeit, Lehrling"
-    tell_friend: "Erzähle es einem Freund"
-    tell_parent: "Erzähle es deinen Eltern"
 
   login:
     sign_up: "Registrieren"
@@ -160,6 +158,7 @@ module.exports = nativeDescription: "Deutsch (Deutschland)", englishDescription:
     unwatch: "Nicht beobachten"
     submit_patch: "Patch einreichen"
     submit_changes: "Änderungen einreichen"
+#    save_changes: "Save Changes"
 
   general:
     and: "und"
@@ -263,6 +262,9 @@ module.exports = nativeDescription: "Deutsch (Deutschland)", englishDescription:
     victory_hour_of_code_done_yes: "Ja, ich bin mit meiner Code-Stunde fertig!"
     victory_experience_gained: "Gewonnene XP"
     victory_gems_gained: "Gewonnene Edelsteine"
+#    victory_new_item: "New Item"
+#    victory_viking_code_school: "Holy smokes, that was a hard level you just beat! If you aren't already a software developer, you should be. You just got fast-tracked for acceptance with Viking Code School, where you can take your skills to the next level and become a professional web developer in 14 weeks."
+#    victory_become_a_viking: "Become a Viking"
     guide_title: "Anleitung"
     tome_minion_spells: "Die Zaubersprüche Deiner Knechte" # Only in old-style levels.
     tome_read_only_spells: "Nur-lesen Zaubersprüche" # Only in old-style levels.
@@ -273,7 +275,7 @@ module.exports = nativeDescription: "Deutsch (Deutschland)", englishDescription:
     tome_submit_button: "Senden"
     tome_reload_method: "Original Code für diese Methode neu laden" # Title text for individual method reload button.
     tome_select_method: "Methode auswählen"
-    tome_see_all_methods: "Alle bearbeitbaren Methoden anzeigen" # Title text for method list selector (shown when there are multiple programmable methdos).
+    tome_see_all_methods: "Alle bearbeitbaren Methoden anzeigen" # Title text for method list selector (shown when there are multiple programmable methods).
     tome_select_a_thang: "Wähle jemanden aus, um "
     tome_available_spells: "Verfügbare Zauber"
     tome_your_skills: "Deine Fähigkeiten"
@@ -290,6 +292,11 @@ module.exports = nativeDescription: "Deutsch (Deutschland)", englishDescription:
     time_current: "Aktuell"
     time_total: "Total"
     time_goto: "Gehe zu"
+#    non_user_code_problem_title: "Unable to Load Level"
+#    infinite_loop_title: "Infinite Loop Detected"
+#    infinite_loop_description: "The initial code to build the world never finished running. It's probably either really slow or has an infinite loop. Or there might be a bug. You can either try running this code again or reset the code to the default state. If that doesn't fix it, please let us know."
+#    check_dev_console: "You can also open the developer console to see what might be going wrong."
+#    check_dev_console_link: "(instructions)"
     infinite_loop_try_again: "Erneut versuchen"
     infinite_loop_reset_level: "Level zurücksetzen"
     infinite_loop_comment_out: "Meinen Code auskommentieren"
@@ -336,8 +343,10 @@ module.exports = nativeDescription: "Deutsch (Deutschland)", englishDescription:
     tip_google: "Hast du ein Problem, das du nicht lösen kannst? Google es!"
 #    tip_adding_evil: "Adding a pinch of evil."
 #    tip_hate_computers: "That's the thing about people who think they hate computers. What they really hate is lousy programmers. - Larry Niven"
-    tip_open_source_contribute: "Du kannst Dabei helfen, CodeCombat zu verbessern."
+    tip_open_source_contribute: "Du kannst dabei helfen, CodeCombat zu verbessern."
 #    tip_recurse: "To iterate is human, to recurse divine. - L. Peter Deutsch"
+#    tip_free_your_mind: "You have to let it all go, Neo. Fear, doubt, and disbelief. Free your mind. - Morpheus"
+#    tip_strong_opponents: "Even the strongest of opponents always has a weakness. - Itachi Uchiha"
 
   game_menu:
     inventory_tab: "Inventar"
@@ -358,7 +367,7 @@ module.exports = nativeDescription: "Deutsch (Deutschland)", englishDescription:
 
   leaderboard:
     leaderboard: "Bestenliste"
-    view_other_solutions: "Andere Lösungen"
+    view_other_solutions: "Andere Lösungen" # {change}
     scores: "Punktzahl"
     top_players: "Die besten Spieler von"
     day: "Heute"
@@ -398,12 +407,13 @@ module.exports = nativeDescription: "Deutsch (Deutschland)", englishDescription:
 
   subscribe:
     comparison_blurb: "Verbessere deine Fähigkeiten mit einem CodeCombat Abonnement"
-    feature1: "60+ Basislevel in 4 Gebieten"
+    feature1: "60+ Basislevel in 4 Gebieten" # {change}
     feature2: "7 mächtige <strong>neue Helden</strong> mit einzigartigen Fertigkeiten"
-    feature3: "30+ Bonuslevel"
+    feature3: "30+ Bonuslevel" # {change}
     feature4: "<strong>3500 Bonusedelsteine</strong> jeden Monat!"
     feature5: "Videoanleitungen"
     feature6: "Premium Emailsupport"
+#    feature7: "Private <strong>Clans</strong>"
     free: "Kostenlos"
     month: "Monate"
     subscribe_title: "Abonnieren"
@@ -424,10 +434,15 @@ module.exports = nativeDescription: "Deutsch (Deutschland)", englishDescription:
     parent_email_sent: "Email gesendet!"
     parent_email_title: "Wie lautet die Emailadresse deiner Eltern?"
     parents: "Für Eltern"
-    parents_title: "Dein Kind lernt zu programmieren."
+    parents_title: "Dein Kind lernt zu programmieren." # {change}
     parents_blurb1: "Mit CodeCombat, lernt dein Kind richtige Programme zu schreiben. Es fängt mit einfachen Befehlen an, und schreitet ganz unmerklich zu schwierigeren Themen fort."
-    parents_blurb2: "Für 9.99 im Monat, bekommt es jede Woche neue Herausforderungen sowie persönlichen Email Support von professionellen Programmierern."
+#    parents_blurb1a: "Computer programming is an essential skill that your child will undoubtedly use as an adult. By 2020, basic software skills will be needed by 77% of jobs, and software engineers are in high demand across the world. Did you know that Computer Science is the highest-paid university degree?"
+    parents_blurb2: "Für 9.99 im Monat, bekommt es jede Woche neue Herausforderungen sowie persönlichen Email Support von professionellen Programmierern." # {change}
     parents_blurb3: "Kein Risiko: 100% Geld zurück Garantie, und 1-Klick Abokündigung."
+#    payment_methods: "Payment Methods"
+#    payment_methods_title: "Accepted Payment Methods"
+#    payment_methods_blurb1: "We currently accept credit cards and Alipay."
+#    payment_methods_blurb2: "If you require an alternate form of payment, please contact"
     stripe_description: "Monatsabo"
     subscription_required_to_play: "Leider musst du ein Abo haben, um dieses Level spielen zu können."
     unlock_help_videos: "Abonniere, um alle Videoanleitungen freizuschalten."
@@ -440,7 +455,9 @@ module.exports = nativeDescription: "Deutsch (Deutschland)", englishDescription:
     was_free_until: "Du hattest ein kostenloses Abonnement bis zum"
     managed_subs: "Verwaltete Abonnements"
     managed_subs_desc: "Abonnements für andere Spieler (Studenten, Kinder, usw.) hinzufügen"
+#    managed_subs_desc_2: "Recipients must have a CodeCombat account associated with the email address you provide."
     group_discounts: "Gruppenrabatt"
+#    group_discounts_1: "We also offer group discounts for bulk subscriptions."
     group_discounts_1st: "Erstes Abonnement (inklusive deinem)" # {change}
     group_discounts_full: "voller Preis"
     group_discounts_2nd: "Abonnements 2-11"
@@ -522,8 +539,6 @@ module.exports = nativeDescription: "Deutsch (Deutschland)", englishDescription:
     volume_label: "Lautstärke"
     music_label: "Musik"
     music_description: "Schalte Hintergrundmusik an/aus."
-    autorun_label: "Autorun"
-    autorun_description: "Steuere automatische Programmausführung."
     editor_config: "Editor Einstellungen"
     editor_config_title: "Editor Einstellungen"
     editor_config_level_language_label: "Sprache für dieses Level"
@@ -564,7 +579,7 @@ module.exports = nativeDescription: "Deutsch (Deutschland)", englishDescription:
     nick_blurb: "Motivationsguru"
     michael_title: "Programmierer"
     michael_blurb: "Sys Admin"
-    matt_title: "Programmierer"
+    matt_title: "Programmierer" # {change}
     matt_blurb: "Radfahrer"
     cat_title: "Chief Artisan"
     cat_blurb: "Luftbändiger"
@@ -580,32 +595,47 @@ module.exports = nativeDescription: "Deutsch (Deutschland)", englishDescription:
 #    intro_1: "CodeCombat is an online game that teaches programming. Students write code in real programming languages."
 #    intro_2: "No experience required!"
 #    free_title: "How much does it cost?"
-#    cost_china: "CodeCombat in China is free for the first five levels, after which it costs $9.99 per month for access to our other 120+ levels on our exclusive China servers."
-#    free_1: "CodeCombat Basic is FREE! There are 70+ free levels which cover every concept."
+#    cost_china: "CodeCombat in China is free for the first five levels, after which it costs $9.99 USD per month for access to our other 140+ levels on our exclusive China servers."
+#    free_1: "CodeCombat Basic is FREE! There are 80+ free levels which cover every concept."
 #    free_2: "A monthly subscription provides access to video tutorials and extra practice levels."
 #    teacher_subs_title: "Teachers get free subscriptions!"
 #    teacher_subs_1: "Please contact"
 #    teacher_subs_2: "to set up a free monthly subscription."
 #    sub_includes_title: "What is included in the subscription?"
-#    sub_includes_1: "In additional to the 70+ basic levels, students with a monthly subscription get access to these additional features:" # {change}
-#    sub_includes_2: "40+ practice levels"
+#    sub_includes_1: "In addition to the 80+ basic levels, students with a monthly subscription get access to these additional features:"
+#    sub_includes_2: "60+ practice levels"
 #    sub_includes_3: "Video tutorials"
 #    sub_includes_4: "Premium email support"
 #    sub_includes_5: "7 new heroes with unique skills to master"
 #    sub_includes_6: "3500 bonus gems every month"
+#    sub_includes_7: "Private Clans"
+#    monitor_progress_title: "How do I monitor student progress?"
+#    monitor_progress_1: "Student progress can be monitored by creating a"
+#    monitor_progress_2: "for your class."
+#    monitor_progress_3: "To add a student, send them the invite link for your Clan, which is on the"
+#    monitor_progress_4: "page."
+#    monitor_progress_5: "After they join, you will see a summary of the student's progress on your Clan's page."
+#    private_clans_1: "Private Clans provide increased privacy and detailed progress information for each student."
+#    private_clans_2: "To create a private Clan, check the 'Make clan private' checkbox when creating a"
+#    private_clans_3: "."
 #    who_for_title: "Who is CodeCombat for?"
 #    who_for_1: "We recommend CodeCombat for students aged 9 and up. No prior programming experience is needed."
 #    who_for_2: "We've designed CodeCombat to appeal to both boys and girls."
 #    material_title: "How much material is there?"
-#    material_china: "Approximately 22 hours of gameplay spread over 120+ subscriber-only levels so far, with 5 new levels every week."
-#    material_1: "Approximately 8 hours of free content and an additional 14 hours of subscriber content, with 5 new levels every week." # {change}
+#    material_china: "Approximately 30 hours of gameplay spread over 140+ subscriber-only levels so far, with new levels every week."
+#    material_1: "Approximately 10 hours of free content and an additional 20 hours of subscriber content, with new levels every week."
 #    concepts_title: "What concepts are covered?"
 #    how_much_title: "How much does a monthly subscription cost?"
 #    how_much_1: "A"
 #    how_much_2: "monthly subscription"
 #    how_much_3: "costs $9.99, and can be cancelled anytime."
 #    how_much_4: "Additionally, we provide discounts for larger groups:"
-#    group_discounts_1: "We also offer group discounts for bulk subscriptions."
+#    how_much_5: "We accept discounted one-time purchases and yearly subscription purchases for groups, such as a class or school.  Please contact"
+#    how_much_6: "for more details."
+#    more_info_title: "Where can I find more information?"
+#    more_info_1: "Our"
+#    more_info_2: "teachers forum"
+#    more_info_3: "is a good place to connect with fellow educators who are using CodeCombat."
     sys_requirements_title: "System Voraussetzungen"
 #    sys_requirements_1: "A modern web browser. Newer versions of Chrome, Firefox, or Safari. Internet Explorer 9 or later."
     sys_requirements_2: "Nutzen Sie die neuesten Versionen von Google Chrome oder Firefox." # {change}
@@ -718,6 +748,49 @@ module.exports = nativeDescription: "Deutsch (Deutschland)", englishDescription:
     social_hipchat: "Chatte mit uns in unserem öffentlichen CodeCombat HipChat Raum"
     contribute_to_the_project: "Trage zu diesem Projekt bei"
 
+#  clans:
+#    clan: "Clan"
+#    clans: "Clans"
+#    new_name: "New clan name"
+#    new_description: "New clan description"
+#    make_private: "Make clan private"
+#    subs_only: "subscribers only"
+#    create_clan: "Create New Clan"
+#    public_clans: "Public Clans"
+#    my_clans: "My Clans"
+#    clan_name: "Clan Name"
+#    name: "Name"
+#    chieftain: "Chieftain"
+#    type: "Type"
+#    edit_clan_name: "Edit Clan Name"
+#    edit_clan_description: "Edit Clan Description"
+#    edit_name: "edit name"
+#    edit_description: "edit description"
+#    private: "(private)"
+#    summary: "Summary"
+#    average_level: "Average Level"
+#    average_achievements: "Average Achievements"
+#    delete_clan: "Delete Clan"
+#    leave_clan: "Leave Clan"
+#    join_clan: "Join Clan"
+#    invite_1: "Invite:"
+#    invite_2: "*Invite players to this Clan by sending them this link."
+#    members: "Members"
+#    progress: "Progress"
+#    not_started_1: "not started"
+#    started_1: "started"
+#    complete_1: "complete"
+#    exp_levels: "Expand levels"
+#    rem_hero: "Remove Hero"
+#    status: "Status"
+#    complete_2: "Complete"
+#    started_2: "Started"
+#    not_started_2: "Not Started"
+#    view_solution: "Click to view solution."
+#    latest_achievement: "Latest Achievement"
+#    playtime: "Playtime"
+#    last_played: "Last played"
+
   classes:
     archmage_title: "Erzmagier"
     archmage_title_description: "(Programmierer)"
@@ -730,7 +803,7 @@ module.exports = nativeDescription: "Deutsch (Deutschland)", englishDescription:
     adventurer_summary: "Bekomme unsere neuen Level (sogar unseren Abonnement Inhalt) kostenlos eine Woche früher und hilf uns, Fehler vor der Veröffentlichung zu finden."
     scribe_title: "Schreiber"
     scribe_title_description: "(Artikel Editor)"
-    scribe_summary: "Guter Code braucht gute Dokumentation. Schreibe, bearbeite and verbessere die, von weltweit Millionen von Spielern, gelesenen Dokumentationen."
+    scribe_summary: "Guter Code braucht gute Dokumentation. Schreibe, bearbeite und verbessere die, von weltweit Millionen von Spielern, gelesenen Dokumentationen."
     diplomat_title: "Diplomat"
     diplomat_title_description: "(Übersetzer)"
     diplomat_summary: "CodeCombat wird in 45+ Sprachen von unseren Diplomaten übersetzt. Hilf uns und steuere Übersetzungen bei."
@@ -830,7 +903,7 @@ module.exports = nativeDescription: "Deutsch (Deutschland)", englishDescription:
 
   contribute:
     page_title: "Mitwirken"
-    intro_blurb: "CodeCombat ist zu 100% Open Source! Hunderte hingebungsvolle Spieler haben uns geholfen das Spiel zu dem zu machen was es heute ist. Trete uns bei und schreibe das nächste Kapitel in CodeCombat' Aufgabe, der Welt das Programmieren zu lehren!"
+    intro_blurb: "CodeCombat ist zu 100% Open Source! Hunderte hingebungsvolle Spieler haben uns geholfen das Spiel zu dem zu machen was es heute ist. Tritt uns bei und schreibe das nächste Kapitel in CodeCombat' Aufgabe, der Welt das Programmieren zu lehren!"
     alert_account_message_intro: "Hey du!"
     alert_account_message: "Um Klassen-Emails abonnieren zu können, musst du dich zuerst anmelden."
     archmage_introduction: "Einer der größten Vorteile daran ein Spiel aufzubauen, ist es, dass so viele verschiedene Aspekte eine Rolle spielen. Grafiken, Sound, Echtzeit Networking, Social Networking und natürlich viele der gewöhnlichen Aspekte des Programmierens, von low-level Datenbankmanagement und Server Administration bis hin zum Aufbau von Design und Interface. Es gibt viel zu tun und wenn du ein erfahrener Programmierer bist, mit einer Veranlagung dazu, wirklich knallhart bei CodeCombat einzutauchen, dann könnte diese Klasse etwas für dich sein. Wir würden uns wahnsinnig  über deine Hilfe dabei freuen, das beste Programmierspiel der Welt aufzubauen."
@@ -941,11 +1014,13 @@ module.exports = nativeDescription: "Deutsch (Deutschland)", englishDescription:
     fight: "Kämpft!"
     watch_victory: "Schau dir deinen Sieg an"
     defeat_the: "Besiege den"
+#    tournament_started: ", started"
     tournament_ends: "Turnier endet"
     tournament_ended: "Turnier beendet"
     tournament_rules: "Turnier-Regeln"
     tournament_blurb: "Schreibe Code, sammle Gold, erstelle Armeen, zerquetsche Feinde, gewinne Preis und verbessere deine Karriere in unserem 40.000 $ Greed-Turnier! Schau dir die Details"
     tournament_blurb_criss_cross: "Gewinne Gebote, konstruiere Pfade, trickse Feinde aus, greife Edelsteine ab und verbessere deine Karriere in unserem Criss-Cross-Turnier! Schau dir die Details"
+#    tournament_blurb_zero_sum: "Unleash your coding creativity in both gold gathering and battle tactics in this alpine mirror match between red sorcerer and blue sorcerer. The tournament began on Friday, March 27 and will run until Monday, April 6 at 5PM PDT. Compete for fun and glory! Check out the details"
     tournament_blurb_blog: "auf unserem Blog an"
     rules: "Regeln"
     winners: "Gewinner"
@@ -964,6 +1039,7 @@ module.exports = nativeDescription: "Deutsch (Deutschland)", englishDescription:
     no_achievements: "Noch keine Erfolge verdient."
     favorite_prefix: "Lieblingssprache ist "
     favorite_postfix: "."
+#    not_member_of_clans: "Not a member of any clans yet."
 
   achievements:
     last_earned: "Zuletzt erhalten"
@@ -1069,6 +1145,7 @@ module.exports = nativeDescription: "Deutsch (Deutschland)", englishDescription:
     user_remarks: "Benutzerkommentare"
     versions: "Versionen"
     items: "Gegenstände"
+#    hero: "Hero"
     heroes: "Helden"
     achievement: "Achievement"
     clas: "CLAs"

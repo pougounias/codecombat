@@ -5,8 +5,6 @@ utils = require 'core/utils'
 
 # Internal amount and query params are in cents, display and web form input amount is in USD
 
-# TODO: not supporting bitcoin currently because it pays without a confirmation step
-
 module.exports = class InvoicesView extends RootView
   id: "invoices-view"
   template: template
@@ -53,7 +51,7 @@ module.exports = class InvoicesView extends RootView
       amount: @amount
       description: @description
       bitcoin: true
-      alipay: if me.get('chinaVersion') or me.get('preferredLanguage')[...2] is 'zh' then true else 'auto'
+      alipay: if me.get('chinaVersion') or (me.get('preferredLanguage') or 'en-US')[...2] is 'zh' then true else 'auto'
 
   onStripeReceivedToken: (e) ->
     data = {

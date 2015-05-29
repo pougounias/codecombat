@@ -542,7 +542,8 @@ handleLadderUpdate = (req, res) ->
   res.send('Great work, Captain Cron! I can take it from here.')
   res.end()
   # TODO: somehow fetch the histograms
-  emailDays = [1, 2, 4, 7, 14, 30]
+  #emailDays = [1, 2, 4, 7, 14, 30]
+  emailDays = [1, 3, 7]  # Reduced to keep smaller monthly recipient footprint
   now = new Date()
   for daysAgo in emailDays
     # Get every session that was submitted in a 5-minute window after the time.
@@ -615,7 +616,7 @@ sendLadderUpdateEmail = (session, now, daysAgo) ->
         log.error "Error sending ladder update email: #{err} with result #{result}" if err
 
     urlForMatch = (match) ->
-      "http://codecombat.com/play/level/#{session.levelID}?team=#{session.team}&session=#{session._id}&opponent=#{match.opponents[0].sessionID}"
+      "http://codecombat.com/play/level/#{session.levelID}?team=#{session.team}&opponent=#{match.opponents[0].sessionID}"
 
     onFetchedDefeatedOpponent = (err, defeatedOpponent) ->
       if err
@@ -706,9 +707,10 @@ sendNextStepsEmail = (user, now, daysAgo) ->
       return log.error "Couldn't find next level for #{user.get('email')}: #{err}" if err
       name = if user.get('firstName') and user.get('lastName') then "#{user.get('firstName')}" else user.get('name')
       name = 'hero' if not name or name is 'Anoner'
-      secretLevel = switch user.get('testGroupNumber') % 8
-        when 0, 1, 2, 3 then name: 'Forgetful Gemsmith', slug: 'forgetful-gemsmith'
-        when 4, 5, 6, 7 then name: 'Signs and Portents', slug: 'signs-and-portents'
+      #secretLevel = switch user.get('testGroupNumber') % 8
+      #  when 0, 1, 2, 3 then name: 'Forgetful Gemsmith', slug: 'forgetful-gemsmith'
+      #  when 4, 5, 6, 7 then name: 'Signs and Portents', slug: 'signs-and-portents'
+      secretLevel = name: 'Signs and Portents', slug: 'signs-and-portents'  # We turned off this test for now and are sending everyone to forgetful-gemsmith
 
       # TODO: make this smarter, actually data-driven, looking at all available sessions
       shadowGuardSession = _.find sessions, levelID: 'shadow-guard'
@@ -718,17 +720,21 @@ sendNextStepsEmail = (user, now, daysAgo) ->
       isKid = not isAdult  # Assume kid if not specified
       offers =
         'app-academy': isAdult and isVeryFast
-        'designlab': isAdult
+        'designlab': isAdult and Math.random() < 0.25
         'tealeaf-academy': isAdult and isFast
-        'talent-buddy': isAdult
-        'coding-campus': isAdult and Math.random() < 0.5  # TODO: geodetect UT and give priority
+        'talent-buddy': isAdult and Math.random() < 0.25
+        'coding-campus': isAdult and Math.random() < 0.25  # TODO: geodetect UT and give priority
         'viking': isAdult and isFast
+        'maker-square': isAdult and isFast
+        'the-firehose-project': isAdult and isFast
         #'mv-code-club': isKid  # TODO: geodetect, get landing page URL
-      nAdditionalOffers = 4 - _.filter(offers).length
-      possibleAdditionalOffers = ['code-school', 'one-month', 'learnable', 'pluralsight']
+        'breakout-mentors': isKid
+      nAdditionalOffers = Math.max 0, 4 - _.filter(offers).length
+      possibleAdditionalOffers = ['ostraining', 'code-school', 'one-month', 'learnable', 'pluralsight']
       for offer in _.sample possibleAdditionalOffers, nAdditionalOffers
         offers[offer] = true
-      # TODO: adjust template to not include any offers if user.isPremium()
+      if user.isPremium()
+        offers = null
       # TODO: do something with the preferredLanguage?
       context =
         email_id: sendwithus.templates.next_steps_email

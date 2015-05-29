@@ -70,7 +70,7 @@ module.exports = class BuyGemsModal extends ModalView
         description: $.t(product.i18n)
         amount: product.amount
         bitcoin: true
-        alipay: if me.get('chinaVersion') or me.get('preferredLanguage')[...2] is 'zh' then true else 'auto'
+        alipay: if me.get('chinaVersion') or (me.get('preferredLanguage') or 'en-US')[...2] is 'zh' then true else 'auto'
       })
 
     @productBeingPurchased = product
@@ -89,7 +89,7 @@ module.exports = class BuyGemsModal extends ModalView
     jqxhr.done(=>
       application.tracker?.trackEvent 'Finished gem purchase',
         productID: @productBeingPurchased.id
-        revenue: @productBeingPurchased.amount / 100
+        value: @productBeingPurchased.amount
       document.location.reload()
     )
     jqxhr.fail(=>

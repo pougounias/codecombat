@@ -1,7 +1,7 @@
 module.exports = nativeDescription: "简体中文", englishDescription: "Chinese (Simplified)", translation:
   home:
     slogan: "通过游戏学习编程"
-    no_ie: "抱歉！ Internet Explorer 8 等旧式预览器无法使用本网站。" # Warning that only shows up in IE8 and older
+    no_ie: "抱歉！ Internet Explorer 8 等老式浏览器无法使用本网站。" # Warning that only shows up in IE8 and older
     no_mobile: "CodeCombat不是针对手机设备设计的，所以可能无法达到最好的体验！" # Warning that shows up on mobile devices
     play: "开始游戏" # The big play button that opens up the campaign view.
     old_browser: "噢, 你的浏览器太老了, 不能运行CodeCombat. 抱歉!" # Warning that shows up on really old Firefox/Chrome/Safari
@@ -64,7 +64,7 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     achievements: "成就" # Tooltip on achievement list button from /play
     account: "账户" # Tooltip on account button from /play
     settings: "设置" # Tooltip on settings button from /play
-#    poll: "Poll" # Tooltip on poll button from /play
+    poll: "投票" # Tooltip on poll button from /play
     next: "下一步" # Go from choose hero to choose inventory before playing a level
     change_hero: "重新选择英雄" # Go back from choose inventory to choose hero
     choose_inventory: "装备道具"
@@ -74,7 +74,7 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     anonymous: "匿名玩家"
     level_difficulty: "难度："
     campaign_beginner: "新手作战"
-    awaiting_levels_adventurer_prefix: "我们每周开放五个关卡"
+    awaiting_levels_adventurer_prefix: "我们每周开放五个关卡" # {change}
     awaiting_levels_adventurer: "注册成为冒险家"
     awaiting_levels_adventurer_suffix: "来优先尝试新关卡"
     adjust_volume: "音量调节"
@@ -94,14 +94,12 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     campaign_classic_algorithms_description: "... 你可以在此学习到计算机科学中最常用的算法"
 
   share_progress_modal:
-    blurb: "你的进度真快！快告诉其他人你从CodeCombat学到了什么！"
+    blurb: "你的进度真快！快告诉其他人你从CodeCombat学到了什么！" # {change}
     email_invalid: "邮件地址不可用。"
-    form_blurb: "输入他们的邮件地址，我们会让他们知道CodeCombat的有趣"
-    form_label: "邮件地址"
+    form_blurb: "输入他们的邮件地址，让他们知道CodeCombat的有趣"
+    form_label: "您的邮件地址"
     placeholder: "邮件地址"
     title: "你做的太好了！"
-    tell_friend: "告诉你的好朋友们"
-    tell_parent: "告诉你亲爱的家人"
 
   login:
     sign_up: "注册"
@@ -160,6 +158,7 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     unwatch: "取消关注"
     submit_patch: "提交补丁"
     submit_changes: "提交更新"
+#    save_changes: "Save Changes"
 
   general:
     and: "与"
@@ -263,6 +262,9 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     victory_hour_of_code_done_yes: "是的, 完成了!"
     victory_experience_gained: "获得经验"
     victory_gems_gained: "获得宝石"
+    victory_new_item: "新的物品"
+    victory_viking_code_school: "这关真的超难! 如果你想成为一个软件开发人员，你就应该去试一下Viking Code School。在这里你可以把你的知识增长到另一个台阶。只需要14周你就能成为一个专业的网页开发人员。"
+    victory_become_a_viking: "成为一个维京人吧"
     guide_title: "指南"
     tome_minion_spells: "助手的咒语" # Only in old-style levels.
     tome_read_only_spells: "只读的咒语" # Only in old-style levels.
@@ -273,7 +275,7 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     tome_submit_button: "提交"
     tome_reload_method: "重载该方法的原始代码" # Title text for individual method reload button.
     tome_select_method: "选择方法"
-    tome_see_all_methods: "查看所有能够编辑的方法" # Title text for method list selector (shown when there are multiple programmable methdos).
+    tome_see_all_methods: "查看所有能够编辑的方法" # Title text for method list selector (shown when there are multiple programmable methods).
     tome_select_a_thang: "选择人物来 "
     tome_available_spells: "可用的法术"
     tome_your_skills: "你的技能"
@@ -290,6 +292,11 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     time_current: "现在:"
     time_total: "最大:"
     time_goto: "跳到:"
+    non_user_code_problem_title: "不能读入关卡"
+    infinite_loop_title: "有无限循环"
+#    infinite_loop_description: "The initial code to build the world never finished running. It's probably either really slow or has an infinite loop. Or there might be a bug. You can either try running this code again or reset the code to the default state. If that doesn't fix it, please let us know."
+    check_dev_console: "你也可以打开开发者界面看一下有什么可能出错了。"
+    check_dev_console_link: "(说明)"
     infinite_loop_try_again: "请重试"
     infinite_loop_reset_level: "重置等级"
     infinite_loop_comment_out: "为我的代码添加注释"
@@ -337,7 +344,9 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     tip_adding_evil: "加入万恶的压力。"
     tip_hate_computers: "那些认为他们讨厌电脑的人，其实他们讨厌的是垃圾程序编写员。- Larry Niven"
     tip_open_source_contribute: "你可以帮助「CodeCombat」提高！"
-#    tip_recurse: "To iterate is human, to recurse divine. - L. Peter Deutsch"
+    tip_recurse: "迭代为人，递归为神 - L. Peter Deutsch"
+#    tip_free_your_mind: "You have to let it all go, Neo. Fear, doubt, and disbelief. Free your mind. - Morpheus"
+    tip_strong_opponents: "即使是最强大的对手也是有弱点的. - Itachi Uchiha"
 
   game_menu:
     inventory_tab: "道具箱"
@@ -358,7 +367,7 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
 
   leaderboard:
     leaderboard: "排行榜"
-    view_other_solutions: "查看其它解答"
+    view_other_solutions: "查看其它解答" # {change}
     scores: "分数"
     top_players: "顶尖玩家是"
     day: "今天"
@@ -398,12 +407,13 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
 
   subscribe:
     comparison_blurb: "亲，订阅CodeCombat，大力的提升你的技能！"
-    feature1: "60+ 基本关卡（4个世界）"
+    feature1: "60+ 基本关卡（4个世界）" # {change}
     feature2: "7 个强大 <strong>英雄</strong>以及各式非凡技能!"
-    feature3: "30+ 奖励关卡"
+    feature3: "30+ 奖励关卡" # {change}
     feature4: "每月享有3500额外宝石"
     feature5: "视频教学"
     feature6: "专业邮件支援"
+    feature7: "私人 <strong>氏族</strong>"
     free: "免费"
     month: "月"
     subscribe_title: "订阅"
@@ -424,15 +434,20 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     parent_email_sent: "邮件已发送!"
     parent_email_title: "什么是你父母的邮件地址？"
     parents: "致家长"
-    parents_title: "您的孩子将要学习编写程序。"
+    parents_title: "您的孩子将要学习编写程序。" # {change}
     parents_blurb1: "通过使用CodeCombat，您的孩子将学习编写真正的程序代码。他们将学到简单指令，进而处理更复杂的问题。"
-    parents_blurb2: "每月支付9.9美元，他们每周都会有新的挑战，并且通过电子邮件获得专业程序员的指导。"
+    parents_blurb1a: "不用怀疑计算机编程能力将是您的孩子作为一个成年人的基本技能。到2020年，77%的工作将会需要编码能力，并且软件工程师将在世界各地成为高需求职业。你知道吗，计算机科学是收入最高的大学学位？"
+    parents_blurb2: "每月支付9.9美元，他们每周都会有新的挑战，并且通过电子邮件获得专业程序员的指导。" # {change}
     parents_blurb3: "无风险承诺：100%退款，一键退款。"
+    payment_methods: "付费方式"
+    payment_methods_title: "可接受的付款方式"
+    payment_methods_blurb1: "我们现有的付费方式有信用卡和支付宝"
+    payment_methods_blurb2: "如果您想用其他付费方式,请联系我们"
     stripe_description: "每月订阅"
     subscription_required_to_play: "订阅后才可开始本关"
     unlock_help_videos: "订阅后才可以解锁视频教学哦！"
-#    personal_sub: "Personal Subscription" # Accounts Subscription View below
-#    loading_info: "Loading subscription information..."
+    personal_sub: "个人订阅" # Accounts Subscription View below
+    loading_info: "正在读入订阅内容..."
 #    managed_by: "Managed by"
 #    will_be_cancelled: "Will be cancelled on"
 #    currently_free: "You currently have a free subscription"
@@ -440,16 +455,18 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
 #    was_free_until: "You had a free subscription until"
 #    managed_subs: "Managed Subscriptions"
 #    managed_subs_desc: "Add subscriptions for other players (students, children, etc.)"
+#    managed_subs_desc_2: "Recipients must have a CodeCombat account associated with the email address you provide."
 #    group_discounts: "Group discounts"
+#    group_discounts_1: "We also offer group discounts for bulk subscriptions."
 #    group_discounts_1st: "1st subscription"
-#    group_discounts_full: "Full price"
+    group_discounts_full: "全价"
 #    group_discounts_2nd: "Subscriptions 2-11"
-#    group_discounts_20: "20% off"
+    group_discounts_20: "八折"
 #    group_discounts_12th: "Subscriptions 12+"
-#    group_discounts_40: "40% off"
+    group_discounts_40: "六折"
 #    subscribing: "Subscribing..."
 #    recipient_emails_placeholder: "Enter email address to subscribe, one per line."
-#    subscribe_users: "Subscribe Users"
+    subscribe_users: "订阅用户"
 #    users_subscribed: "Users subscribed:"
 #    no_users_subscribed: "No users subscribed, please double check your email addresses."
 #    current_recipients: "Current Recipients"
@@ -485,12 +502,12 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     skills: "技能"
 #    attack_1: "Deals"
 #    attack_2: "of listed"
-#    attack_3: "weapon damage."
+    attack_3: "武器攻击力."
 #    health_1: "Gains"
 #    health_2: "of listed"
-#    health_3: "armor health."
+    health_3: "装备血量."
 #    speed_1: "Moves at"
-#    speed_2: "meters per second."
+    speed_2: "米每秒."
     available_for_purchase: "可以购买" # Shows up when you have unlocked, but not purchased, a hero in the hero store
     level_to_unlock: "未解锁关卡：" # Label for which level you have to beat to unlock a particular hero (click a locked hero in the store to see)
     restricted_to_certain_heroes: "只有特定的英雄可以进入本关。"
@@ -522,8 +539,6 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     volume_label: "音量"
     music_label: "音乐"
     music_description: "开/关背景音乐"
-    autorun_label: "自动运行"
-    autorun_description: "控制是否自动运行代码"
     editor_config: "编辑器配置"
     editor_config_title: "编辑器配置"
     editor_config_level_language_label: "本关卡编程语言"
@@ -564,48 +579,63 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     nick_blurb: "充满动力的大牛"
     michael_title: "程序员"
     michael_blurb: "系统管理员"
-    matt_title: "程序员"
+    matt_title: "程序员" # {change}
     matt_blurb: "自行车爱好者"
-#    cat_title: "Chief Artisan"
-#    cat_blurb: "Airbender"
-#    josh_title: "Game Designer"
-#    josh_blurb: "Floor Is Lava"
-#    jose_title: "Music"
+    cat_title: "首席关卡设计师"
+    cat_blurb: "气宗"
+    josh_title: "游戏设计师"
+    josh_blurb: "地面是熔岩"
+    jose_title: "音乐"
 #    jose_blurb: "Taking Off"
 #    retrostyle_title: "Illustration"
 #    retrostyle_blurb: "RetroStyle Games"
 
   teachers:
     title: "CodeCombat给教师的说明" # {change}
-#    intro_1: "CodeCombat is an online game that teaches programming. Students write code in real programming languages."
-#    intro_2: "No experience required!"
-#    free_title: "How much does it cost?"
-#    cost_china: "CodeCombat in China is free for the first five levels, after which it costs $9.99 per month for access to our other 120+ levels on our exclusive China servers."
-#    free_1: "CodeCombat Basic is FREE! There are 70+ free levels which cover every concept."
+    intro_1: "CodeCombat 是一个教编程的网上游戏。学生会用编程语言写代码。"
+    intro_2: "无需经验!"
+    free_title: "要多少钱?"
+#    cost_china: "CodeCombat in China is free for the first five levels, after which it costs $9.99 USD per month for access to our other 140+ levels on our exclusive China servers."
+#    free_1: "CodeCombat Basic is FREE! There are 80+ free levels which cover every concept."
 #    free_2: "A monthly subscription provides access to video tutorials and extra practice levels."
-#    teacher_subs_title: "Teachers get free subscriptions!"
-#    teacher_subs_1: "Please contact"
+    teacher_subs_title: "教师可免费订阅!"
+    teacher_subs_1: "请联系"
 #    teacher_subs_2: "to set up a free monthly subscription."
 #    sub_includes_title: "What is included in the subscription?"
-#    sub_includes_1: "In additional to the 70+ basic levels, students with a monthly subscription get access to these additional features:" # {change}
-#    sub_includes_2: "40+ practice levels"
-#    sub_includes_3: "Video tutorials"
+#    sub_includes_1: "In addition to the 80+ basic levels, students with a monthly subscription get access to these additional features:"
+    sub_includes_2: "超过60个练习关卡"
+    sub_includes_3: "视频教学"
 #    sub_includes_4: "Premium email support"
 #    sub_includes_5: "7 new heroes with unique skills to master"
-#    sub_includes_6: "3500 bonus gems every month"
+    sub_includes_6: "每月享有3500额外宝石"
+#    sub_includes_7: "Private Clans"
+#    monitor_progress_title: "How do I monitor student progress?"
+#    monitor_progress_1: "Student progress can be monitored by creating a"
+#    monitor_progress_2: "for your class."
+#    monitor_progress_3: "To add a student, send them the invite link for your Clan, which is on the"
+#    monitor_progress_4: "page."
+#    monitor_progress_5: "After they join, you will see a summary of the student's progress on your Clan's page."
+#    private_clans_1: "Private Clans provide increased privacy and detailed progress information for each student."
+#    private_clans_2: "To create a private Clan, check the 'Make clan private' checkbox when creating a"
+#    private_clans_3: "."
 #    who_for_title: "Who is CodeCombat for?"
 #    who_for_1: "We recommend CodeCombat for students aged 9 and up. No prior programming experience is needed."
 #    who_for_2: "We've designed CodeCombat to appeal to both boys and girls."
 #    material_title: "How much material is there?"
-#    material_china: "Approximately 22 hours of gameplay spread over 120+ subscriber-only levels so far, with 5 new levels every week."
-#    material_1: "Approximately 8 hours of free content and an additional 14 hours of subscriber content, with 5 new levels every week." # {change}
+#    material_china: "Approximately 30 hours of gameplay spread over 140+ subscriber-only levels so far, with new levels every week."
+#    material_1: "Approximately 10 hours of free content and an additional 20 hours of subscriber content, with new levels every week."
 #    concepts_title: "What concepts are covered?"
-#    how_much_title: "How much does a monthly subscription cost?"
-#    how_much_1: "A"
-#    how_much_2: "monthly subscription"
-#    how_much_3: "costs $9.99, and can be cancelled anytime."
-#    how_much_4: "Additionally, we provide discounts for larger groups:"
-#    group_discounts_1: "We also offer group discounts for bulk subscriptions."
+    how_much_title: "每月的订阅费用是多少?"
+    how_much_1: ""
+    how_much_2: "每月订阅"
+    how_much_3: "每月$9.99, 并可随时要求退款."
+    how_much_4: "另外，团体购买者将享受折扣优惠"
+#    how_much_5: "We accept discounted one-time purchases and yearly subscription purchases for groups, such as a class or school.  Please contact"
+#    how_much_6: "for more details."
+#    more_info_title: "Where can I find more information?"
+#    more_info_1: "Our"
+#    more_info_2: "teachers forum"
+#    more_info_3: "is a good place to connect with fellow educators who are using CodeCombat."
     sys_requirements_title: "系统需求"
     sys_requirements_1: "因为CodeCombat是个游戏，它对于电脑的要求很高以运行的顺畅。我们已经优化过他以便让他能在每一个最新浏览器或是比较旧的电脑跑得顺畅，所以每一个人都能享受CodeCombat带来的乐趣。如上，为了使你顺利的完成Hour of Code的学习，我们建议你：" # {change}
     sys_requirements_2: "使用最新版本的Chrome或是Firefox." # {change}
@@ -717,6 +747,49 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     social_gplus: "关注CodeCombat的Google+主页"
     social_hipchat: "在公共的CodeCombat HipChat聊天室与我们进行交流"
     contribute_to_the_project: "为项目做贡献"
+
+#  clans:
+#    clan: "Clan"
+#    clans: "Clans"
+#    new_name: "New clan name"
+#    new_description: "New clan description"
+#    make_private: "Make clan private"
+#    subs_only: "subscribers only"
+#    create_clan: "Create New Clan"
+#    public_clans: "Public Clans"
+#    my_clans: "My Clans"
+#    clan_name: "Clan Name"
+#    name: "Name"
+#    chieftain: "Chieftain"
+#    type: "Type"
+#    edit_clan_name: "Edit Clan Name"
+#    edit_clan_description: "Edit Clan Description"
+#    edit_name: "edit name"
+#    edit_description: "edit description"
+#    private: "(private)"
+#    summary: "Summary"
+#    average_level: "Average Level"
+#    average_achievements: "Average Achievements"
+#    delete_clan: "Delete Clan"
+#    leave_clan: "Leave Clan"
+#    join_clan: "Join Clan"
+#    invite_1: "Invite:"
+#    invite_2: "*Invite players to this Clan by sending them this link."
+#    members: "Members"
+#    progress: "Progress"
+#    not_started_1: "not started"
+#    started_1: "started"
+#    complete_1: "complete"
+#    exp_levels: "Expand levels"
+#    rem_hero: "Remove Hero"
+#    status: "Status"
+#    complete_2: "Complete"
+#    started_2: "Started"
+#    not_started_2: "Not Started"
+#    view_solution: "Click to view solution."
+#    latest_achievement: "Latest Achievement"
+#    playtime: "Playtime"
+#    last_played: "Last played"
 
   classes:
     archmage_title: "大法师"
@@ -897,17 +970,17 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     helpful_ambassadors: "我们亲切的使节:"
 
   ladder:
-    please_login: "请在对奕之前先登录。"
+    please_login: "对战之前请先登录。"
     my_matches: "我的对手"
     simulate: "模拟"
     simulation_explanation: "通过模拟游戏，你可以让你的游戏更快的得到评分。"
     simulate_games: "模拟游戏！"
     simulate_all: "重置并模拟游戏！"
-    games_simulated_by: "你模拟玩过的游戏:"
-    games_simulated_for: "待你模拟玩的游戏:"
-    games_simulated: "游戏已模拟"
-    games_played: "已玩过"
-    ratio: "通过率"
+    games_simulated_by: "由你模拟过的游戏数:"
+    games_simulated_for: "为你模拟过的游戏数:"
+    games_simulated: "模拟次数"
+    games_played: "被模拟次数"
+    ratio: "比率"
     leaderboard: "排行榜"
     battle_as: "我要加入这一方 "
     summary_your: "你 "
@@ -941,11 +1014,13 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     fight: "战斗！"
     watch_victory: "观看你的胜利"
     defeat_the: "击败了"
+    tournament_started: "，锦标赛已开始"
     tournament_ends: "锦标赛结束"
     tournament_ended: "Tournament ended"
     tournament_rules: "锦标赛规则"
     tournament_blurb: "写代码，收金币，建军队，碎敌军，赢奖品，以及在我们奖励多达$40,000的Greed tournament里升级你的事业！ 快去查阅详情！"
     tournament_blurb_criss_cross: "赢得竞拍，建造道路，智胜对手，夺取宝石，在纵横交错锦标赛中完成生涯晋级! 现在就查看详情！"
+#    tournament_blurb_zero_sum: "Unleash your coding creativity in both gold gathering and battle tactics in this alpine mirror match between red sorcerer and blue sorcerer. The tournament began on Friday, March 27 and will run until Monday, April 6 at 5PM PDT. Compete for fun and glory! Check out the details"
     tournament_blurb_blog: "关注我们的博客"
     rules: "规则"
     winners: "胜利者"
@@ -964,6 +1039,7 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     no_achievements: "还未得到任何成就。"
     favorite_prefix: "最喜爱的语言是 "
     favorite_postfix: "。"
+#    not_member_of_clans: "Not a member of any clans yet."
 
   achievements:
     last_earned: "最近取得的"
@@ -1069,6 +1145,7 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     user_remarks: "用户备注"
     versions: "版本"
     items: "物品"
+#    hero: "Hero"
     heroes: "英雄"
     achievement: "成就"
     clas: "CLAs"

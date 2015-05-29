@@ -62,6 +62,9 @@ module.exports = class LevelLoader extends CocoClass
   # Session Loading
 
   loadSession: ->
+    if @level.get('type', true) in ['hero', 'hero-ladder', 'hero-coop']
+      @sessionDependenciesRegistered = {}
+
     if @sessionID
       url = "/db/level.session/#{@sessionID}"
     else
@@ -69,10 +72,12 @@ module.exports = class LevelLoader extends CocoClass
       url += "?team=#{@team}" if @team
 
     session = new LevelSession().setURL url
+    session.project = ['creator', 'team', 'heroConfig', 'codeLanguage', 'submittedCodeLanguage', 'state'] if @headless
     @sessionResource = @supermodel.loadModel(session, 'level_session', {cache: false})
     @session = @sessionResource.model
     if @opponentSessionID
       opponentSession = new LevelSession().setURL "/db/level.session/#{@opponentSessionID}"
+      opponentSession.project = session.project if @headless
       @opponentSessionResource = @supermodel.loadModel(opponentSession, 'opponent_session', {cache: false})
       @opponentSession = @opponentSessionResource.model
 
@@ -103,7 +108,6 @@ module.exports = class LevelLoader extends CocoClass
     else if session is @opponentSession
       @consolidateFlagHistory() if @session.loaded
     return unless @level.get('type', true) in ['hero', 'hero-ladder', 'hero-coop']
-    @sessionDependenciesRegistered ?= {}
     heroConfig = session.get('heroConfig')
     heroConfig ?= me.get('heroConfig') if session is @session and not @headless
     heroConfig ?= {}
@@ -230,7 +234,10 @@ module.exports = class LevelLoader extends CocoClass
         requiredThangTypes.push itemThangType for itemThangType in _.values (component.config.inventory ? {})
       else if component.config.requiredThangTypes
         requiredThangTypes = requiredThangTypes.concat component.config.requiredThangTypes
-    for thangType in requiredThangTypes
+    extantRequiredThangTypes = _.filter requiredThangTypes
+    if extantRequiredThangTypes.length < requiredThangTypes.length
+      console.error "Some Thang had a blank required ThangType in components list:", components
+    for thangType in extantRequiredThangTypes
       url = "/db/thang.type/#{thangType}/version?project=name,components,original,rasterIcon,kind"
       @worldNecessities.push @maybeLoadURL(url, ThangType, 'thang')
 

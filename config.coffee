@@ -39,6 +39,9 @@ exports.config =
         # So we remove the ones that have public in them.
         exec = require('child_process').exec
         exec "perl -pi -e 's/\\/\\/# sourceMappingURL=public.*//g' public/javascripts/*.js"
+    vagrant:
+      watcher:
+        usePolling: true
 
   files:
     javascripts:
@@ -196,6 +199,8 @@ exports.config =
     sass:
       mode: 'ruby'
       allowCache: true
+    bless:
+      cacheBuster: false
 
   modules:
     definition: (path, data) ->

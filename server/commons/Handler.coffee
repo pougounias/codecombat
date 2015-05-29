@@ -81,7 +81,7 @@ module.exports = class Handler
   sendBadInputError: (res, message) -> errors.badInput(res, message)
   sendPaymentRequiredError: (res, message) -> errors.paymentRequired(res, message)
   sendDatabaseError: (res, err) ->
-    return @sendError(res, err.code, err.response) if err.response and err.code
+    return @sendError(res, err.code, err.response) if err?.response and err?.code
     log.error "Database error, #{err}"
     errors.serverError(res, 'Database error, ' + err)
 
@@ -206,13 +206,15 @@ module.exports = class Handler
       return @sendForbiddenError(res)
 
   getById: (req, res, id) ->
-    # return @sendNotFoundError(res) # for testing
     return @sendForbiddenError(res) unless @hasAccess(req)
-
-    @getDocumentForIdOrSlug id, (err, document) =>
+    if req.query.project
+      projection = {}
+      projection[field] = 1 for field in req.query.project.split(',')
+    @getDocumentForIdOrSlug id, projection, (err, document) =>
       return @sendDatabaseError(res, err) if err
       return @sendNotFoundError(res) unless document?
       return @sendForbiddenError(res) unless @hasAccessToDocument(req, document)
+      res.setHeader 'Cache-Control', 'no-cache' unless Handler.isID(id + '')  # Don't cache if it's a slug instead of an ID
       @sendSuccess(res, @formatEntity(req, document))
 
   getByRelationship: (req, res, args...) ->
@@ -228,7 +230,7 @@ module.exports = class Handler
       return @getNamesByOriginals(req, res)
     @getPropertiesFromMultipleDocuments res, User, 'name', ids
 
-  getNamesByOriginals: (req, res) ->
+  getNamesByOriginals: (req, res, nonVersioned=false) ->
     ids = req.query.ids or req.body.ids
     ids = ids.split(',') if _.isString ids
     ids = _.uniq ids
@@ -236,11 +238,12 @@ module.exports = class Handler
     # Hack: levels loading thang types need the components returned as well.
     # Need a way to specify a projection for a query.
     project = {name: 1, original: 1, kind: 1, components: 1}
-    sort = {'version.major':-1, 'version.minor':-1}
+    sort = if nonVersioned then {} else {'version.major': -1, 'version.minor': -1}
 
     makeFunc = (id) =>
       (callback) =>
-        criteria = {original:mongoose.Types.ObjectId(id)}
+        criteria = {}
+        criteria[if nonVersioned then '_id' else 'original'] = mongoose.Types.ObjectId(id)
         @modelClass.findOne(criteria, project).sort(sort).exec (err, document) ->
           return done(err) if err
           callback(null, document?.toObject() or null)
@@ -489,14 +492,18 @@ module.exports = class Handler
 
   @isID: (id) -> _.isString(id) and id.length is 24 and id.match(/[a-f0-9]/gi)?.length is 24
 
-  getDocumentForIdOrSlug: (idOrSlug, done) ->
+  getDocumentForIdOrSlug: (idOrSlug, projection, done) ->
+    unless done
+      done = projection  # projection is optional argument
+      projection = null
     idOrSlug = idOrSlug+''
     if Handler.isID(idOrSlug)
-      @modelClass.findById(idOrSlug).exec (err, document) ->
-        done(err, document)
+      query = @modelClass.findById(idOrSlug)
     else
-      @modelClass.findOne {slug: idOrSlug}, (err, document) ->
-        done(err, document)
+      query = @modelClass.findOne {slug: idOrSlug}
+    query.select projection if projection
+    query.exec (err, document) ->
+      done(err, document)
 
   doWaterfallChecks: (req, document, done) ->
     return done(null, document) unless @waterfallFunctions.length

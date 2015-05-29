@@ -253,6 +253,15 @@
         font-weight: bold
         color: rgb(40, 33, 22)
         margin-right: 12px
+        width: 78px
+
+        &.four-digits
+          font-size: 40px
+          margin-top: 3px
+
+        &.five-digits
+          font-size: 30px
+          margin-top: 10px
 
       .total-label
         float: left
@@ -324,7 +333,7 @@
     height: 60px
     line-height: 30px
     margin: 0 10px
-    float: left
+    float: right
 
   .next-level-buttons
     float: right
@@ -341,7 +350,7 @@
 
       .rank-button.btn-block
         display: inline-block
-        width: initial
+        width: auto
         padding-left: 19px
         padding-right: 19px
 
@@ -369,6 +378,11 @@
     .text-link
       color: lighten(#0b63bc, 10%)
 
+  .offer
+    display: none
+
+    p
+      color: white
 
 html.no-borderimage
   #hero-victory-modal

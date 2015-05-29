@@ -271,7 +271,10 @@ module.exports = class PlayLevelView extends RootView
     Backbone.Mediator.publish "ipad:language-chosen", language: e.session.get('codeLanguage') ? "python"
     # Just the level and session have been loaded by the level loader
     if e.level.get('slug') is 'zero-sum'
-      e.session.set 'heroConfig', {"thangType":"52fd1524c7e6cf99160e7bc9","inventory":{"misc-0":"53e2396a53457600003e3f0f","programming-book":"546e266e9df4a17d0d449be5","minion":"54eb5dbc49fa2d5c905ddf56","feet":"53e214f153457600003e3eab","right-hand":"54eab7f52b7506e891ca7202","left-hand":"5463758f3839c6e02811d30f","wrists":"54693797a2b1f53ce79443e9","gloves":"5469425ca2b1f53ce7944421","torso":"546d4a549df4a17d0d449a97","neck":"54693274a2b1f53ce79443c9","eyes":"546941fda2b1f53ce794441d","head":"546d4ca19df4a17d0d449abf"}}
+      sorcerer = '52fd1524c7e6cf99160e7bc9'
+      if e.session.get('creator') is '532dbc73a622924444b68ed9'  # Wizard Dude gets his own avatar
+        sorcerer = '53e126a4e06b897606d38bef'
+      e.session.set 'heroConfig', {"thangType":sorcerer,"inventory":{"misc-0":"53e2396a53457600003e3f0f","programming-book":"546e266e9df4a17d0d449be5","minion":"54eb5dbc49fa2d5c905ddf56","feet":"53e214f153457600003e3eab","right-hand":"54eab7f52b7506e891ca7202","left-hand":"5463758f3839c6e02811d30f","wrists":"54693797a2b1f53ce79443e9","gloves":"5469425ca2b1f53ce7944421","torso":"546d4a549df4a17d0d449a97","neck":"54693274a2b1f53ce79443c9","eyes":"546941fda2b1f53ce794441d","head":"546d4ca19df4a17d0d449abf"}}
     else if e.level.get('type', true) in ['hero', 'hero-ladder', 'hero-coop'] and not _.size e.session.get('heroConfig')?.inventory ? {}
       @setupManager?.destroy()
       @setupManager = new LevelSetupManager({supermodel: @supermodel, levelID: @levelID, parent: @, session: @session})
@@ -349,6 +352,7 @@ module.exports = class PlayLevelView extends RootView
       @realTimeMultiplayerContinueGame @options.realTimeMultiplayerSessionID
     # TODO: Is it possible to create a Mongoose ObjectId for 'ls', instead of the string returned from get()?
     application.tracker?.trackEvent 'Started Level', category:'Play Level', levelID: @levelID, ls: @session?.get('_id') unless @observing
+    $(window).trigger 'resize'
 
   playAmbientSound: ->
     return if @destroyed
@@ -451,7 +455,7 @@ module.exports = class PlayLevelView extends RootView
 
   onInfiniteLoop: (e) ->
     return unless e.firstWorld
-    @openModalView new InfiniteLoopModal()
+    @openModalView new InfiniteLoopModal nonUserCodeProblem: e.nonUserCodeProblem
     application.tracker?.trackEvent 'Saw Initial Infinite Loop', category: 'Play Level', level: @level.get('name'), label: @level.get('name') unless @observing
 
   onHighlightDOM: (e) -> @highlightElement e.selector, delay: e.delay, sides: e.sides, offset: e.offset, rotation: e.rotation
