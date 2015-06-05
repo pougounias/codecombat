@@ -406,7 +406,7 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
 #    price: "x3500 / mo"
 
 #  subscribe:
-    comparison_blurb: "Βελτίωση τις δεξιότητές σου με μια συνδρομή στο CodeCombat!"
+    comparison_blurb: "Βελτίωσε τις δεξιότητές σου με μια συνδρομή στο CodeCombat!"
     feature1: "80+ βασικά επίπεδα εκτεινόμενα σε 4 κόσμους"
     feature2: "7 ισχυροί <strong>νέοι ήρωες</strong> με μοναδικές δεξιότητες!"
     feature3: "60+ επί πλέον επίπεδα"
@@ -1175,7 +1175,7 @@ module.exports = nativeDescription: "Ελληνικά", englishDescription: "Gre
     multiplayer_link_description: "Δώστε αυτό τον τον σύνδεσμο σε οποιονδήποτε για να ενταχθούν στο παιχνίδι σου."
     multiplayer_hint_label: "Συμβουλή:"
     multiplayer_hint: " Κάντε κλικ στο σύνδεσμο για να επιλέξετε όλα, στη συνέχεια, πατήστε την Apple-C ή Ctrl-C για να αντιγράψετε το σύνδεσμο."
-    multiplayer_coming_soon: "Περισσότερα multiplayer χαρακτιριστηκα προσεχως!"
+    multiplayer_coming_soon: "Περισσότερα multiplayer χαρακτηριστηκά προσεχώς!"
 #    multiplayer_sign_in_leaderboard: "Sign in or create an account and get your solution on the leaderboard."
 
   legal:
